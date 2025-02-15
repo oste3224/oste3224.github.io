@@ -1,0 +1,61 @@
+.quote-container {
+    margin-right: 150px;
+    float: right;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 200px 0;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.contact-left-title {
+    font-size: 30px;
+    color: #fff;
+}
+.contact-left-title hr {
+    border: none;
+    width: 150px;
+    height: 5px;
+    background: #ff0088;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.contact-inputs {
+    width: 300px;
+    height: 35px;
+    border: 1px solid;
+    outline: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+}
+.contact-left textarea{
+    resize: none;
+    height: 100px;
+    padding-top: 10px;
+    
+}
+.contact-inputs:focus{
+    border: 1px solid #ff0088;
+}
+.contact-inputs::placeholder {
+    color: #a9a9a9;
+}
+    
+.contact-left button {
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 16px;
+    gap: 10px;
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: #22cf1d;
+    cursor: pointer;
+    font-weight: 500;
+}   

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A2B Website</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="quote.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="topnav">
+        <nav id="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="logo">
+        <img src="images/logo.png" alt="mainlogo" width="437" height="350">
+    </div>
+</header>
+<div class="background-div"></div> <!-- Add this div for the background -->
+<section id="quote">
+    <div class="quote-container">
+        <form action="" class="contact-left">
+            <div class= contact-left-title>
+                <h2>Get a Free Quote</h2>
+                <hr>
+            </div>
+                <input type="text" name="name" placeholder="Name" class="contact-inputs" required>
+                <input type="email" name="email" placeholder="Email" class="contact-inputs" required>
+                <input type="text" name="phone" placeholder="Phone Number" class="contact-inputs" required>
+                <input type="text" name="postcode" placeholder="Postcode" class="contact-inputs" required>
+                <textarea name="message" maxlength="500" placeholder="Short description of job; Items to be moved and access point (flights of stairs, lack of parking nearby etc.)" class="contact-inputs" required></textarea>
+                <button type="submit" class="contact-button">Submit</button>
+        </form>
+    </div>
+</section>
+
+</body>
+</html>
