@@ -10,6 +10,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+
 
 </head>
 <body>
@@ -18,29 +20,59 @@
         <nav id="navbar">
             <ul>
                 <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <!-- <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About</a></li> -->
             </ul>
         </nav>
-        <a class="button" href="quote.html">Get a Free Quote</a>
-    </div>
+        <a class="phone" href="tel:0494171265">
+            <i data-feather="phone-call" style="width: 30px; height: 30px;"></i>
+            0494-171-265
+        </a>
+    </div>  
     <div class="logo">
-        <img src="images/logo.png" alt="mainlogo" width="437" height="350">
+        <img src="images/logo.png" alt="mainlogo" width="437" height="350">s
     </div>
 </header>
-<div class="background-div"></div> <!-- Add this div for the background -->
+<!-- <div class="background-div"></div> Add this div for the background -->
 <section id="intro">
     <div class="intro-container">
-        <img class="intro-image" src="images/our-junk-removal-team.jpg" alt="mainimage">
-        <div id="rectangle">
-                <h1>Quick and easy rubbish removal in Sydney</h1>
-                <p>Our team of professionals are here to help you with all your rubbish removal needs. We offer a range of services to suit your needs and budget.</p>
-                <a class="button" href="quote.html">Get a Free Quote</a>
-
-            </div>
-
+        <div class="intro-image-container">
+            <img class="intro-image" src="images/our-junk-removal-team.jpg" alt="mainimage">
+        </div>
+        <div class="intro-text">
+            <h1>Quick and easy rubbish removal in Sydney</h1>
+            <p>Our team of professionals are here to help you with all your rubbish removal needs. We offer a range of services to suit your needs and budget.</p>
+            <a class="quote-button" href="quote.html">Get a Free Quote</a>
         </div>
     </div>
 </section>
+<section id="info-sections">
+    <div class="info-section">
+        <i data-feather="home" style="width: 64px; height: 64px;"></i>
+        <h2>Household Rubbish</h2>
+        <p>We make household rubbish removal easy, handling everything from old furniture and appliances to general waste. <br> 
+        Whether you're spring cleaning, moving out, or just decluttering, our team ensures fast and hassle-free disposal.</p>
+    </div>
+    
+    <div class="info-section">
+        <i data-feather="briefcase" style="width: 64px; height: 64px;"></i>
+        <h2>Office Cleanout</h2>
+        <p>Upgrade your workspace by clearing out unwanted furniture, electronics, and general office waste. <br> 
+        We handle office cleanouts efficiently, ensuring minimal disruption to your business.</p>
+    </div>
+    
+    <div class="info-section">
+        <i data-feather="file-text" style="width: 64px; height: 64px;"></i>
+        <h2>Deceased Estate</h2>
+        <p>We offer compassionate and respectful deceased estate cleanups, helping families sort, remove, and dispose of items with care. <br> 
+        Our team is here to make the process as smooth and stress-free as possible.</p>
+    </div>
+    
+</section>
+
+<script>
+  feather.replace();
+</script>
+</body>
 </html>

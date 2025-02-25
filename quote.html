@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="quote.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
 </head>
 <body>
 
@@ -15,33 +18,85 @@
         <nav id="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <!-- <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#about">About</a></li> -->
             </ul>
         </nav>
+        <a class="phone" href="tel:0494171265">
+            <i data-feather="phone-call" style="width: 30px; height: 30px;"></i>
+            0494-171-265
+        </a>
     </div>
     <div class="logo">
         <img src="images/logo.png" alt="mainlogo" width="437" height="350">
     </div>
 </header>
 <div class="background-div"></div> <!-- Add this div for the background -->
+
 <section id="quote">
     <div class="quote-container">
-        <form action="" class="contact-left">
-            <div class= contact-left-title>
+        <div class="contact-left">
+            <h1>Get $50 off for booking online!</h1>
+            <h2>Simply enter your details and we will be in touch to organise your free quote.</h2>
+            <h3>In a rush? feel free to call or text us anytime to get a quote over the phone <a class="phone-inline" href="tel:0494171265">
+                0494-171-265
+            </a></h3>
+        <!-- <img src="images/before-after.jpg" alt="before-after" width="50%" height="50%"> -->
+        </div>
+        <form id="quote-form" action="https://api.web3forms.com/submit" method="POST" class="contact-right">
+            <input type="hidden" name="access_key" value="3d05d803-ef3c-41c9-8544-02b8821c4b89">
+            <div class= contact-right-title>
                 <h2>Get a Free Quote</h2>
                 <hr>
             </div>
-                <input type="text" name="name" placeholder="Name" class="contact-inputs" required>
-                <input type="email" name="email" placeholder="Email" class="contact-inputs" required>
-                <input type="text" name="phone" placeholder="Phone Number" class="contact-inputs" required>
-                <input type="text" name="postcode" placeholder="Postcode" class="contact-inputs" required>
-                <textarea name="message" maxlength="500" placeholder="Short description of job; Items to be moved and access point (flights of stairs, lack of parking nearby etc.)" class="contact-inputs" required></textarea>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="contact-inputs" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="contact-inputs" required>
+                
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" name="phone" class="contact-inputs" required>
+                
+                <label for="postcode">Postcode</label>
+                <input type="text" id="postcode" name="postcode" class="contact-inputs" required>
+                
+                <label for="message">Short description of job</label>
+                <textarea id="message" name="message" maxlength="500" placeholder="Items to be moved and ease of access (2nd story apartment, lack of parking nearby etc.)" class="contact-inputs" required></textarea>
+                
+                <!-- <label for="image">(Optional) Upload up to 3 images of the job</label>
+                <input type="file" id="image" name="image" class="contact-inputs" accept="image/*" multiple> -->
+
                 <button type="submit" class="contact-button">Submit</button>
         </form>
     </div>
 </section>
+<script>
+    feather.replace();
+    function onSubmit(token) {
+     document.getElementById("quote-form").submit();
+   }
 
+    document.getElementById('quote-form').addEventListener('submit', function(event) {
+        const fileInput = document.getElementById('image');
+        const maxFiles = 3;
+        const maxSize = 2 * 1024 * 1024; // 2MB in bytes
+
+        if (fileInput.files.length > maxFiles) {
+            alert('You can only upload up to 3 images.');
+            event.preventDefault();
+            return;
+        }
+
+        for (let i = 0; i < fileInput.files.length; i++) {
+            if (fileInput.files[i].size > maxSize) {
+                alert('Each image must be less than 2MB.');
+                event.preventDefault();
+                return;
+            }
+        }
+    });
+</script>
 </body>
 </html>
