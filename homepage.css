@@ -84,7 +84,7 @@
 
 @media (max-width: 768px) {
     .intro-container {
-        padding: 20px;
+        padding: 0px;
     }
 
     .intro-image-container {
