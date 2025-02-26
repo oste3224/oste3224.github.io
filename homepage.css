@@ -81,4 +81,35 @@
 .info-section p {
     font-size: 16px;
 }
-    
+
+@media (max-width: 768px) {
+    .intro-container {
+        padding: 20px;
+    }
+
+    .intro-image-container {
+        height: 30vh;
+    }
+
+    .intro-text h1 {
+        font-size: 36px;
+    }
+
+    .intro-text p {
+        font-size: 16px;
+    }
+
+    .intro-text a.button {
+        font-size: 18px;
+    }
+
+    #info-sections {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-section {
+        margin: 10px 0;
+        width: 90%;
+    }
+}

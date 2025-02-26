@@ -103,4 +103,30 @@ a.button:hover {
     transition: all 0.3s;
 }
 
+@media (max-width: 768px) {
+    .logo {
+        top: 0;
+        width: 100%;
+        height: auto;
+    }
 
+    .topnav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    a.button {
+        width: 100%;
+        text-align: center;
+    }
+}
