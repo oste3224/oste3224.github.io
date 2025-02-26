@@ -5,10 +5,7 @@
     font-family: 'Oswald', sans-serif;
 }
 
-body {
-    background: #333;
-    margin-top: 60px;
-}
+
 
 .background-div {
     background-image: url("images/logo.png");
@@ -29,13 +26,16 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
-
 }
 
 header::after {
     content: '';
     display: table;
     clear: both;
+}
+body {
+    background: #333;
+    margin-top: 60px;
 }
 
 .logo {
@@ -137,6 +137,12 @@ a.phone .feather {
 }
 
 @media (max-width: 768px) {
+    body {
+        margin-top: 32px;
+    }
+    header {
+        margin-top: -32px;
+    }
     .logo {
         width: 150px;
     }
@@ -157,7 +163,6 @@ a.phone .feather {
         justify-content: flex-end;
         padding-left: 0;
     }
-
     nav li {
         margin-right: 0;
     }
