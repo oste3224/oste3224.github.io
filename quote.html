@@ -15,6 +15,9 @@
 
 <header>
     <div class="topnav">
+        <div class="logo">
+            <img src="images/logo.png" alt="mainlogo">
+        </div>
         <nav id="navbar">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -24,13 +27,11 @@
             </ul>
         </nav>
         <a class="phone" href="tel:0494171265">
-            <i data-feather="phone-call" style="width: 30px; height: 30px;"></i>
+            <i data-feather="phone-call"></i>
             0494-171-265
         </a>
     </div>
-    <div class="logo">
-        <img src="images/logo.png" alt="mainlogo" width="437" height="350">
-    </div>
+
 </header>
 <div class="background-div"></div> <!-- Add this div for the background -->
 
@@ -76,27 +77,7 @@
     feather.replace();
     function onSubmit(token) {
      document.getElementById("quote-form").submit();
-   }
-
-    document.getElementById('quote-form').addEventListener('submit', function(event) {
-        const fileInput = document.getElementById('image');
-        const maxFiles = 3;
-        const maxSize = 2 * 1024 * 1024; // 2MB in bytes
-
-        if (fileInput.files.length > maxFiles) {
-            alert('You can only upload up to 3 images.');
-            event.preventDefault();
-            return;
-        }
-
-        for (let i = 0; i < fileInput.files.length; i++) {
-            if (fileInput.files[i].size > maxSize) {
-                alert('Each image must be less than 2MB.');
-                event.preventDefault();
-                return;
-            }
-        }
-    });
+   };
 </script>
 </body>
 </html>

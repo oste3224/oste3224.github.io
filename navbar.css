@@ -39,41 +39,48 @@ header::after {
 }
 
 .logo {
-    position: fixed; /* Change from absolute to fixed */
-    top: -50px; /* Adjust top position as needed */
+    width: 437px; /* Set the desired width */
+    height: auto; /* Maintain aspect ratio */
     overflow: hidden;
+}
+
+.logo img {
+    margin-top: 180px;
+    width: 100%; /* Make the image take the full width of the container */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .topnav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background: #444;
     width: 100%;
+    height: 60px;
+    box-sizing: border-box;
 }
 
 nav ul {
     display: flex; /* Use flexbox for the list */
-    padding-left: 420px; /* Remove padding */
     margin: 0; /* Remove margin */
-    flex: 1;
+    padding: 0; /* Remove padding */
     list-style: none; /* Remove default list styling */
-    box-sizing: border-box;
+    flex: 1;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 nav li {
-    display: inline;
     margin-right: 20px; /* Add small gaps between each option */
 }
 
 nav li a {
     font-family: 'Oswald', sans-serif;
-    float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 22px;
+    display: block;
 }
 
 /* Change the color of links on hover */
@@ -93,15 +100,12 @@ a.quote-button {
     font-family: 'Oswald', sans-serif;
     font-size: 20px;
     font-weight: 500;
-    position: relative;
     background-color: #ff0088;
     color: white;
     border-radius: 10px;
     padding: 8px 12px; /* Reduce padding */
     text-align: center;
     text-decoration: none;
-    align-self: center;
-    justify-content: flex-end;
     margin-right: 20px;
 }
 a.quote-button:hover {
@@ -121,31 +125,57 @@ a.phone {
     text-align: center;
     text-decoration: none;
     margin-right: 20px;
+    margin-left: auto;
 }
 
 a.phone .feather {
-    margin-right: 10px; /* Adjust the margin as needed */
-    margin-top: 5px;
+    margin-right: 10px;
+    vertical-align: middle;
+    margin-top: 6px;
+    width: 30px;
+    height: 30px;
 }
 
 @media (max-width: 768px) {
+    .logo {
+        width: 150px;
+    }
+    .logo img{
+        margin-top: 50px;
+        width: 100%;
+        height: auto;
+    }
     .topnav {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        height: 32px;
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: flex-end;
         padding-left: 0;
     }
 
     nav li {
         margin-right: 0;
-        margin-bottom: 10px;
     }
 
+    nav li a {
+        font-size: 11px;
+        padding: 8px 12px; /* Adjust padding for smaller screens */
+    }
     a.phone {
-        margin-top: 10px;
-        font-size: 24px;
+        font-size: 15px;
+        padding: 6px 10px;
+        margin-right: 10px;
+    }
+    a.phone .feather {
+        margin-right: 5px;
+        vertical-align: middle;
+        margin-top: 3px;
+        width: 15px;
+        height: 15px;
     }
 }
