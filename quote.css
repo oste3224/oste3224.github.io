@@ -125,15 +125,17 @@ button.contact-button:hover {
 .contact-left h2 {
     font-size: 1.875rem;
     color: var(--text-color);
-    font-weight: 400;
+    font-weight: 300;
     margin-bottom: 0.5rem;
 }
 
 .contact-left h3 {
+    font-family: "Roboto", sans-serif;
+    font-variation-settings: 'wdth' 85;
+    font-weight: 400;
     font-size: 1.25rem;
     color: var(--text-color);
     margin-top: 1.25rem;
-    font-weight: 400;
 }
 
 @media (max-width: 1200px) {

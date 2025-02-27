@@ -41,23 +41,14 @@
 }
 
 .intro-text p {
+    font-family: "Roboto", sans-serif;
+    font-variation-settings: 'wdth' 85;
+    font-weight: 400;
     font-size: 20px;
     margin: 20px 0;
-    font-weight: 300;
 }
 
-.intro-text a.button {
-    font-family: 'Oswald', sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    background-color: #ff0088;
-    color: white;
-    border-radius: 10px;
-    padding: 8px 12px;
-    text-align: center;
-    text-decoration: none;
-    margin-top: 20px;
-}
+
 #info-sections {
     display: flex;
     justify-content: space-between;
@@ -79,6 +70,9 @@
 }
 
 .info-section p {
+    font-family: "Roboto", sans-serif;
+    font-variation-settings: 'wdth' 85;
+    font-weight: 400;
     font-size: 16px;
 }
 
