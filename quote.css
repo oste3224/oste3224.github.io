@@ -111,6 +111,7 @@ button.contact-button:hover {
 }
 
 .contact-left {
+    padding-left: 4rem;
     padding-right: 9.375rem;
     padding-bottom: 6.25rem;
 }
@@ -148,7 +149,7 @@ button.contact-button:hover {
 
 @media (max-width: 768px) {
     :root {
-        --input-width: 100%;
+        --input-width: 80%;
     }
     
     .quote-container {
@@ -197,7 +198,7 @@ button.contact-button:hover {
     }
 
     button.contact-button {
-        width: 100%;
+        width: 40%;
         justify-content: center;
     }
 }
