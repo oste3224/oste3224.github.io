@@ -45,14 +45,14 @@
     font-variation-settings: 'wdth' 85;
     font-weight: 400;
     font-size: 20px;
-    margin: 20px 0;
+    margin: 20px 2rem;
 }
 
 
 #info-sections {
     display: flex;
     justify-content: space-between;
-    margin: 20px 0;
+    margin: 20px 2rem;
 }
 
 .info-section {
@@ -94,7 +94,7 @@
     }
 
     .intro-text a.button {
-        font-size: 18px;
+        font-size: 32px;
     }
 
     #info-sections {
@@ -105,5 +105,48 @@
     .info-section {
         margin: 10px 0;
         width: 90%;
+    }
+}
+@media (max-width: 480px) {
+    .intro-message {
+        padding: 3rem 0;
+    }
+    
+    .intro-image-container {
+        height: 25vh;
+    }
+
+    .intro-text h1 {
+        font-size: 1.75rem;
+        margin: 0.75rem 0;
+    }
+
+    .intro-text p {
+        font-size: 0.875rem;
+        margin: 0.75rem 0.5rem;
+    }
+
+    .intro-text a.button {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    #info-sections {
+        margin: 0.75rem 0.5rem;
+    }
+
+    .info-section {
+        padding: 0.875rem;
+        margin: 0.5rem 0;
+        width: 100%;
+    }
+
+    .info-section h2 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-section p {
+        font-size: 0.875rem;
     }
 }
