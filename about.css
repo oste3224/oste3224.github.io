@@ -1,0 +1,308 @@
+:root {
+    --primary-color: #ff0088;
+    --primary-hover-color: #ff76bf;
+    --secondary-color: #22cf1d;
+    --background-color: #444;
+    --text-color: #f2f2f2;
+    --section-spacing: 4rem;
+    --border-radius: 0.5rem;
+}
+
+body {
+    background-color: #333;
+    color: var(--text-color);
+    font-family: "Roboto", sans-serif;
+    margin-top: var(--navbar-height);
+}
+
+.background-div {
+    background-image: url("images/logo.png");
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 3.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* About Content */
+.about-content {
+    padding: var(--section-spacing) 2rem;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section {
+    margin-bottom: var(--section-spacing);
+}
+
+.about-section h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--text-color);
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.about-section h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 5rem;
+    height: 0.25rem;
+    background-color: var(--primary-color);
+    border-radius: 0.25rem;
+}
+
+.section-content {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.section-content.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content p {
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.about-image {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background-color: #444;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.service-card:hover {
+    background-color: #555;
+    transform: translateY(-0.5rem);
+}
+
+.service-icon {
+    width: 4rem;
+    height: 4rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+}
+
+.service-card h3 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: #222;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-section h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.quote-button {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.quote-button:hover {
+    background-color: var(--primary-hover-color);
+    color: black;
+    transition: all 0.3s;
+}
+
+.phone-button {
+    display: flex;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 500;
+    background-color: var(--secondary-color);
+    color: white;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+}
+
+.phone-button:hover {
+    background-color: #1ebc19;
+    transition: all 0.3s;
+}
+
+.phone-button i {
+    margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.25rem;
+    }
+    
+    .section-content {
+        flex-direction: column;
+    }
+    
+    .section-content.reverse {
+        flex-direction: column;
+    }
+    
+    .about-section h2 {
+        font-size: 2rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --section-spacing: 3rem;
+    }
+    
+    .hero-section {
+        padding: 4rem 1rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-section p {
+        font-size: 1rem;
+    }
+    
+    .about-content {
+        padding: var(--section-spacing) 1rem;
+    }
+    
+    .about-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .text-content p {
+        font-size: 1rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    .service-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+    
+    .cta-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .cta-section p {
+        font-size: 1rem;
+    }
+    
+    .quote-button, .phone-button {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        width: 100%;
+    }
+}
