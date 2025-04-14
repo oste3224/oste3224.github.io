@@ -75,7 +75,11 @@ textarea.contact-inputs {
     margin-bottom: 1.25rem;
     border-radius: var(--input-border-radius);
     transition: border-color 0.3s ease;
+    font-family: "Roboto", sans-serif;
+    font-variation-settings: 'wdth' 75;
+    font-weight: 400;
 }
+
 
 textarea.contact-inputs:focus {
     border: 1px solid var(--primary-color);
@@ -131,7 +135,7 @@ button.contact-button:hover {
 
 .contact-left h3 {
     font-family: "Roboto", sans-serif;
-    font-variation-settings: 'wdth' 85;
+    font-variation-settings: 'wdth' 75;
     font-weight: 400;
     font-size: 1.25rem;
     color: var(--text-color);

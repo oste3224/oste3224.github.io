@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="quote.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,10 +21,10 @@
         </div>
         <nav id="navbar">
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <!-- <li><a href="#pricing">Pricing</a></li> -->
                 <!-- <li><a href="#contact">Contact</a></li> -->
-                <li><a href="about.html">About</a></li>
+                <!-- <li><a href="/about">About</a></li> -->
             </ul>
         </nav>
         <a class="phone" href="tel:0494171265">
@@ -64,11 +65,8 @@
                 <input type="text" id="postcode" name="postcode" class="contact-inputs" required>
                 
                 <label for="message">Short description of job</label>
-                <textarea id="message" name="message" maxlength="500" placeholder="Items to be moved and ease of access (2nd story apartment, lack of parking nearby etc.)" class="contact-inputs" required></textarea>
+                <textarea id="message" name="message" maxlength="500" placeholder="Provide details about the items to be moved, access challenges (e.g., stairs, parking), or any special requirements." class="contact-inputs" required></textarea>
                 
-                <!-- <label for="image">(Optional) Upload up to 3 images of the job</label>
-                <input type="file" id="image" name="image" class="contact-inputs" accept="image/*" multiple> -->
-
                 <button type="submit" class="contact-button">Submit</button>
         </form>
         <div class="submission-overlay">
