@@ -185,7 +185,7 @@ body {
     gap: 1.5rem;
 }
 
-.quote-button {
+.quote-button-about {
     font-family: 'Oswald', sans-serif;
     font-size: 1.25rem;
     font-weight: 500;
@@ -197,13 +197,13 @@ body {
     text-decoration: none;
 }
 
-.quote-button:hover {
+.quote-button-about:hover {
     background-color: var(--primary-hover-color);
     color: black;
     transition: all 0.3s;
 }
 
-.phone-button {
+.phone-button-about {
     display: flex;
     align-items: center;
     font-family: 'Oswald', sans-serif;
@@ -216,12 +216,12 @@ body {
     text-decoration: none;
 }
 
-.phone-button:hover {
+.phone-button-about:hover {
     background-color: #1ebc19;
     transition: all 0.3s;
 }
 
-.phone-button i {
+.phone-button-about i {
     margin-right: 0.5rem;
 }
 

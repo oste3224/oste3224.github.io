@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A2B Junk Removals</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="homepage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,30 +49,132 @@
 </section>
 <section id="info-sections">
     <div class="info-section">
-        <i data-feather="home" style="width: 64px; height: 64px;"></i>
-        <h2>Household Rubbish</h2>
-        <p>We make household rubbish removal easy, handling everything from old furniture and appliances to general waste. <br> 
-        Whether you're spring cleaning, moving out, or just decluttering, our team ensures fast and hassle-free disposal.</p>
+        <i data-feather="truck" class="info-section-icon"></i>
+        <h2>Residential Junk Removal</h2>
+        <p>We help homeowners declutter their living spaces by removing unwanted items, furniture, appliances, and more from your property.</p>
+        <a href="/services" class="learn-more">Learn More →</a>
     </div>
     
     <div class="info-section">
-        <i data-feather="briefcase" style="width: 64px; height: 64px;"></i>
-        <h2>Office Cleanout</h2>
-        <p>Upgrade your workspace by clearing out unwanted furniture, electronics, and general office waste. <br> 
-        We handle office cleanouts efficiently, ensuring minimal disruption to your business.</p>
+        <i data-feather="briefcase" class="info-section-icon"></i>
+        <h2>Commercial Cleanouts</h2>
+        <p>Office relocations, warehouse clearances, retail cleanouts - we handle all commercial junk removal needs efficiently.</p>
+        <a href="/services" class="learn-more">Learn More →</a>
     </div>
     
     <div class="info-section">
-        <i data-feather="file-text" style="width: 64px; height: 64px;"></i>
-        <h2>Deceased Estate</h2>
-        <p>We offer compassionate and respectful deceased estate cleanups, helping families sort, remove, and dispose of items with care. <br> 
-        Our team is here to make the process as smooth and stress-free as possible.</p>
+        <i data-feather="trash-2" class="info-section-icon"></i>
+        <h2>Responsible Disposal</h2>
+        <p>We're committed to environmentally conscious disposal practices, recycling and donating items whenever possible.</p>
+        <a href="/services" class="learn-more">Learn More →</a>
     </div>
-    
+</section>
+<!-- Add before testimonials -->
+<section id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps-container">
+        <div class="step">
+            <div class="step-number">1</div>
+            <i data-feather="phone" class="step-icon"></i>
+            <h3>Contact Us</h3>
+            <p>Call us or request a quote online. Tell us what you need removed.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">2</div>
+            <i data-feather="calendar" class="step-icon"></i>
+            <h3>Schedule Pickup</h3>
+            <p>We'll provide a quote and arrange a convenient time for collection.</p>
+        </div>
+        <div class="step">
+            <div class="step-number">3</div>
+            <i data-feather="check-circle" class="step-icon"></i>
+            <h3>We Remove Everything</h3>
+            <p>Our team arrives, loads everything, and leaves your space clean.</p>
+        </div>
+    </div>
+</section>
+<!-- Add after info-sections -->
+<section id="testimonials">
+    <div class="testimonials-container">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonials-slider">
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"A2B made clearing out my garage so easy. The team was professional, efficient, and friendly. They did all the heavy lifting and left everything clean!"</p>
+                <h3>- Sarah T., Parramatta</h3>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"Excellent service! They arrived on time, gave a fair quote, and finished the job faster than expected. Will definitely use them again!"</p>
+                <h3>- Michael D., Northern Beaches</h3>
+            </div>
+            <div class="testimonial">
+                <div class="stars">★★★★★</div>
+                <p>"We needed an urgent office cleanout before moving premises, and A2B came through on short notice. Their team was respectful of our working environment and very thorough."</p>
+                <h3>- Business Solutions Inc., Sydney CBD</h3>
+            </div>
+        </div>
+        <div class="testimonial-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</section>
+<section id="cta-section">
+    <div class="cta-container">
+        <h2>Ready to clear the clutter?</h2>
+        <p>Get your free, no-obligation quote today!</p>
+        <div class="cta-buttons">
+            <a href="/quote" class="quote-button">Get a Free Quote</a>
+            <a href="tel:0494171265" class="phone-button">
+                <i data-feather="phone-call"></i>
+                Call: 0494-171-265
+            </a>
+        </div>
+    </div>
 </section>
 
 <script>
-  feather.replace();
+    feather.replace();
+    
+    // Testimonials slider
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.testimonial');
+    const dots = document.querySelectorAll('.dot');
+    
+    function showSlide(n) {
+        // Hide all slides
+        slides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+        
+        // Remove active class from all dots
+        dots.forEach(dot => {
+            dot.classList.remove('active');
+        });
+        
+        // Show the current slide and activate corresponding dot
+        slides[n].style.display = 'block';
+        dots[n].classList.add('active');
+    }
+    
+    // Initialize the slider
+    showSlide(currentSlide);
+    
+    // Add click handlers to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showSlide(index);
+            currentSlide = index;
+        });
+    });
+    
+    // Auto-rotate slides every 5 seconds
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }, 5000);
 </script>
 </body>
 </html>

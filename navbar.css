@@ -113,7 +113,7 @@ a.quote-button {
     background-color: var(--primary-color);
     color: white;
     border-radius: 0.5rem; /* Adjusted from 10px to 8px (0.5rem) */
-    padding: 0.5rem 0.75rem; /* 8px 12px */
+    padding: 0.5rem 0.75rem;
     text-align: center;
     text-decoration: none;
 }
