@@ -92,11 +92,26 @@ function closeConfirmation() {
 
 document.querySelector('form').addEventListener('submit', function(e) {
     e.preventDefault();
-    
-    // Here you would normally send the form data using fetch or XMLHttpRequest
-    
-    // For demo, we're just showing the confirmation after a short delay
-    setTimeout(showConfirmation, 500);
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            form.reset();
+            showConfirmation();
+        } else {
+            alert('Something went wrong. Please try again or call us directly.');
+        }
+    })
+    .catch(() => {
+        alert('Something went wrong. Please try again or call us directly.');
+    });
 });
     feather.replace();
     function onSubmit(token) {
